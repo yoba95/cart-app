@@ -1,59 +1,80 @@
-# 3CartApp
+# 🛒 Cart App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.6.
+[![Angular](https://img.shields.io/badge/Angular-20.1.6-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.io/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+[![Status](https://img.shields.io/badge/status-en%20desarrollo-yellow?style=for-the-badge)]()
 
-## Development server
+Aplicación web de **carrito de compras** desarrollada con **Angular + TypeScript**, que permite gestionar productos, agregarlos al carrito, calcular totales y eliminar artículos.  
+Este proyecto forma parte de mis prácticas como Ingeniero en Informática, centradas en el aprendizaje de frameworks modernos y arquitectura modular.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🌟 Características principales
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- 🧩 Listado de productos dinámico.  
+- ➕ Agregar productos al carrito.  
+- ➖ Eliminar o vaciar el carrito.  
+- 💰 Cálculo automático del total.  
+- 💾 Persistencia local del carrito (opcional: `localStorage`).  
+- 📱 Interfaz responsive compatible con dispositivos móviles.  
+- ⚙️ Arquitectura limpia con componentes, servicios y modelos en Angular.  
+- 🚀 Preparado para ampliarse con backend, autenticación o pasarelas de pago.
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🧰 Tecnologías utilizadas
 
-```bash
-ng generate component component-name
-```
+| Categoría | Tecnología |
+|------------|-------------|
+| **Frontend Framework** | Angular CLI v20.1.6 |
+| **Lenguaje** | TypeScript |
+| **Estilos** | CSS3 / Angular Material (o Tailwind, según configuración) |
+| **Gestión de Estado** | Servicios y Observables |
+| **Empaquetador** | Angular CLI |
+| **Pruebas** | Karma + Jasmine |
+| **Control de versiones** | Git + GitHub |
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 📦 Instalación y ejecución local
 
-## Building
+### 🔧 Requisitos previos
+- Node.js **v18+**
+-  Angular CLI instalado globalmente:
+  ```bash
+  npm install -g @angular/cli
 
-To build the project run:
+cart-app/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── product-list/          # Lista de productos disponibles
+│   │   │   ├── product-item/          # Componente individual de producto
+│   │   │   ├── cart/                  # Vista y gestión del carrito
+│   │   ├── services/
+│   │   │   ├── cart.service.ts        # Lógica del carrito
+│   │   │   └── product.service.ts     # Fuente de datos de productos
+│   │   ├── models/
+│   │   │   ├── product.model.ts       # Definición de interfaz Product
+│   │   │   └── cart-item.model.ts     # Definición de CartItem
+│   │   ├── pages/
+│   │   │   ├── home/                  # Página principal (listado)
+│   │   │   └── checkout/              # Página de resumen/pago (opcional)
+│   │   ├── app-routing.module.ts
+│   │   ├── app.module.ts
+│   │   └── app.component.ts
+│   ├── assets/
+│   │   ├── img/                       # Imágenes y recursos
+│   │   └── styles/                    # Hojas de estilo globales
+│   ├── environments/
+│   │   ├── environment.ts
+│   │   └── environment.prod.ts
+│   └── index.html
+├── angular.json
+├── package.json
+└── README.md
 
-```bash
-ng build
-```
+  
+- npm **v9+** o **yarn**
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
